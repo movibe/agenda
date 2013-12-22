@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CakeStrap v 0.7.1
 ---
 CakeStrap is a simple HTML5 Ready Bootstrap for CakePHP 2.4.1 Applications.
@@ -81,3 +82,9 @@ Configure::write('Config.language', 'por');
 
 Have a question or found a bug? Please create an issue [here][] on GitHub!
 [here]: https://github.com/hugodias/cakestrap/issues
+=======
+agenda
+======
+
+Agenda, treinamento Cakephp
+>>>>>>> 299877dc1831ed7622fce4f2f1481f423d5bf5ad
