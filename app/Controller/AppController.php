@@ -95,7 +95,7 @@ class AppController extends Controller
             $this->isMobile = true;
         }
     }
-
+    $this->layout = 'bootstrap';
   /**
    *  Se a requisição for mobile ou tablet e existir o(s) arquivo(s)
    *  da view e/ou layout para serem redenrizados

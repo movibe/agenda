@@ -143,7 +143,7 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 CakePlugin::load(array(
-'CakePtbr'
+'CakePtbr',
 // 'Gerenciador' => array(
 //     'bootstrap' => true,
 //     'routes' => true
