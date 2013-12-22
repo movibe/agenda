@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 # User specific & automatically generated files #
 #################################################
 /app/Config/database.php
-/app/Config/config.php
+#/app/Config/config.php
 /app/tmp
 app/tmp/*
 /lib/Cake/Console/Templates/skel/tmp/
-/plugins
+#/plugins
 /vendors
 /build
 /dist
@@ -24,22 +23,5 @@ ehthumbs.db
 Thumbs.db
 .idea/*
 
-cakestrapgit.sublime-workspace
-
-cakestrapgit.sublime-project
-
-app/webroot/files/fotos/1384816708394156941567510041_TH.jpg
-
-app/webroot/files/fotos/1384816708394156941567510041.jpg
-
-
 .idea/codeStyleSettings.xml
-=======
-tmp/*
-[Cc]onfig/core.php
-[Cc]onfig/database.php
-app/tmp/*
-app/[Cc]onfig/core.php
-app/[Cc]onfig/database.php
-!empty
->>>>>>> 299877dc1831ed7622fce4f2f1481f423d5bf5ad
+
