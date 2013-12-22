@@ -142,11 +142,13 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
-/*CakePlugin::load(array(
-'Gerenciador' => array(
-    'bootstrap' => true,
-    'routes' => true
-    )));*/
+CakePlugin::load(array(
+'CakePtbr'
+// 'Gerenciador' => array(
+//     'bootstrap' => true,
+//     'routes' => true
+//     )
+));
 
 if (!Configure::read('Application.status')) {
 	Configure::write(
