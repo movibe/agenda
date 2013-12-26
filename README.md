@@ -13,7 +13,8 @@
 2. jQuery 1.10.2 Stable **(NEW)**
 3. Modernizr
 5. Twitter Bootstrap v3.0.0 **(NEW)**
-6. Multi-Language ( English and Portuguese )
+6. Temas Boostwathc - https://github.com/thomaspark/bootswatch
+7. Idiomas ( English and Portuguese )
 
 ##### Back-end
 1. CakePHP 2.4.1 Security Authentication **(NEW)**
