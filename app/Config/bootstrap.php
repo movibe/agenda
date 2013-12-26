@@ -144,16 +144,20 @@ Cache::config('default', array('engine' => 'File'));
  */
 CakePlugin::load(array(
 'CakePtbr',
+'DebugKit',
+'DataTable'
 // 'Gerenciador' => array(
 //     'bootstrap' => true,
 //     'routes' => true
 //     )
 ));
 
+include CakePlugin::path('CakePtbr') . 'Config' . DS . 'bootstrap.php';
+
 if (!Configure::read('Application.status')) {
 	Configure::write(
 		'Application', array(
-			'name' => 'CakeStrap v0.7',
+			'name' => 'Agenda',
 			'status'=> 0,
 		)
 	);
@@ -178,7 +182,7 @@ if (!Configure::read('Application.status')) {
 */
 Configure::write(
 	'Layout', array(
-		'theme' => 'default'
+		'theme' => 'Cerulean'
 	)
 );
 

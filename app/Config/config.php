@@ -2,13 +2,13 @@
 
 $config = array(
 	'Application' => array(
-		'name' 	  => 'CakeStrap',
+		'name' 	  => 'Agenda',
 		'version' => 'v0.7',
 		'status'  => 1,
 	),
 	'Meta' => array(
 		'title' 	  => 'Agenda',
-		'description' => 'Agenda em Cake',
+		'description' => 'Projeto Cake Agenda',
 		'keywords' 	  => 'agenda, cake',
 	),
 	

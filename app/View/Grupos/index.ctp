@@ -47,7 +47,7 @@
 						<td><?php echo h($grupo['Grupo']['modified']); ?>&nbsp;</td>
 						<td class="actions">
 							<?php echo $this->Html->link('<span class="glyphicon glyphicon-search"></span>', array('action' => 'view', $grupo['Grupo']['id']), array('escape' => false)); ?>
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit"></span>', array('action' => 'edit', $grupo['Grupo']['id']), array('escape' => false)); ?>
+							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit"></span>', array('action' => 'edit', $grupo['Grupo']['id']),  array('escape' => false)); ?>
 							<?php echo $this->Form->postLink('<span class="glyphicon glyphicon-remove"></span>', array('action' => 'delete', $grupo['Grupo']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $grupo['Grupo']['id'])); ?>
 						</td>
 					</tr>

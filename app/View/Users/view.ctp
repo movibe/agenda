@@ -1,7 +1,7 @@
 <?php
 $breadcrumb = array(
 	array(
-		'label' => 'Users',
+		'label' => 'Usuários',
 		'link'	=> '/users'
 	),
 	array(

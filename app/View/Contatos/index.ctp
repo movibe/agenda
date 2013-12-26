@@ -14,10 +14,10 @@
 
 		<div class="col-md-3">
 			<div class="actions">
-				<div class="panel panel-default">
+				<div class="bs-sidebar hidden-print affix-top">
 					<div class="panel-heading">Actions</div>
 						<div class="panel-body">
-							<ul class="nav nav-pills nav-stacked">
+							<ul class="nav bs-sidenav">
 								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Contato'), array('action' => 'add'), array('escape' => false)); ?></li>
 								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Grupos'), array('controller' => 'grupos', 'action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Grupo'), array('controller' => 'grupos', 'action' => 'add'), array('escape' => false)); ?> </li>
@@ -69,7 +69,7 @@
 						<td><?php echo h($contato['Contato']['modified']); ?>&nbsp;</td>
 						<td class="actions">
 							<?php echo $this->Html->link('<span class="glyphicon glyphicon-search"></span>', array('action' => 'view', $contato['Contato']['id']), array('escape' => false)); ?>
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit"></span>', array('action' => 'edit', $contato['Contato']['id']), array('escape' => false)); ?>
+							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit"></span>', array('action' => 'edit', $contato['Contato']['id']),  array('escape' => false)); ?>
 							<?php echo $this->Form->postLink('<span class="glyphicon glyphicon-remove"></span>', array('action' => 'delete', $contato['Contato']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $contato['Contato']['id'])); ?>
 						</td>
 					</tr>

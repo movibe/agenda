@@ -37,9 +37,9 @@ class AppController extends Controller
   public $isMobile = false;
   public $isTablet = false;
 
-  public $components = array('Auth','Session','Error','Cookie','MobileDetect');
+  public $components = array('Auth','Session','Error','Cookie','MobileDetect', 'DebugKit.Toolbar' => array(/* array of settings */));
   public $uses = array('User');
-  public $helpers = array('CakeStrap' => array('className' => 'CakeStrapHtml'));
+  public $helpers = array('CakeStrap' => array('className' => 'CakeStrapHtml') );
 
 
   public function beforeFilter()

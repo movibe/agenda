@@ -37,6 +37,7 @@
             'type' => 'email',
             'class' => 'form-control',
             'placeholder' => __('Email'),
+            'required' => 'required',
             'value' => !empty( $user['User']['email'] ) ? $user['User']['email'] : ''
           )
         );
@@ -57,13 +58,13 @@
       <div class="form-group">
         <?php
         echo $this->Form->input('role', array(
-            'options' => array('admin' => __('Admin'), 'author' => __('Author')),
+            'options' => array('admin' => __('Admin'), 'author' => __('Author') , 'client' => __('Cliente')),
             'class' => 'form-control',
             'selected' => !empty( $user['User']['role'] ) ? $user['User']['role'] : ''
         ));
         ?>
       </div>
-      <button type="submit" class="btn btn-default"><?php echo __("Submit") ?></button>
+      <button type="submit" class="btn btn-warning btn-default"><?php echo __("Submit") ?></button>
     </form>
 
 
