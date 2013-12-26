@@ -10,3 +10,6 @@
 [submodule "app/Plugin/DebugKit"]
 	path = app/Plugin/DebugKit
 	url = https://github.com/cakephp/debug_kit.git
+[submodule "app/webroot/css/themes"]
+	path = app/webroot/css/themes
+	url = https://github.com/thomaspark/bootswatch.git
