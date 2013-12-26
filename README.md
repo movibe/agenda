@@ -1,11 +1,11 @@
-Sistema de Agenda baseado em Cakephp
+#Sistema de Agenda baseado em Cakephp
 
-Frameworks/Plugins Integrados
-# CakeStrap v 0.7.1
-# CakePtbr
-# Debugkit
-# Datatables
-# Skel Bootstrap 3.0
+## Frameworks/Plugins Integrados
+- CakeStrap v 0.7.1
+- CakePtbr
+- Debugkit
+- Datatables
+- Skel Bootstrap 3.0
 
 ### Destaques para 
 ##### Front-end
