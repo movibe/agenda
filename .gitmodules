@@ -7,3 +7,6 @@
 [submodule "app/webroot/css/themes"]
 	path = app/webroot/css/themes
 	url = https://github.com/thomaspark/bootswatch.git
+[submodule "app/Plugin/DataTable"]
+	path = app/Plugin/DataTable
+	url = https://github.com/tigrang/cakephp-datatable.git
