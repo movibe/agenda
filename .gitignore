@@ -1,11 +1,11 @@
 # User specific & automatically generated files #
 #################################################
 /app/Config/database.php
-#/app/Config/config.php
+/app/Config/config.php
 /app/tmp
 app/tmp/*
 /lib/Cake/Console/Templates/skel/tmp/
-/plugins
+#/plugins
 /vendors
 /build
 /dist
@@ -22,6 +22,5 @@ Icon?
 ehthumbs.db
 Thumbs.db
 .idea/*
-
 .idea/codeStyleSettings.xml
 
