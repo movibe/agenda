@@ -16,8 +16,6 @@
                                           'lib/bootstrap.min'
                                           )) ?> 
     
-    
-
 
   <?php
     echo $this->Html->meta('icon');

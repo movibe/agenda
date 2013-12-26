@@ -3,7 +3,7 @@
 $config = array(
 	'Application' => array(
 		'name' 	  => 'Agenda',
-		'version' => 'v0.7',
+		'version' => 'v1.0',
 		'status'  => 1,
 	),
 	'Meta' => array(
