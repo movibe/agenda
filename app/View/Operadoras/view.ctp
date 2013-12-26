@@ -75,6 +75,7 @@
 	<tr>
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Operadora Id'); ?></th>
+		<th><?php echo __('Contato Id'); ?></th>
 		<th><?php echo __('Title'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
@@ -86,6 +87,7 @@
 		<tr>
 			<td><?php echo $telefone['id']; ?></td>
 			<td><?php echo $telefone['operadora_id']; ?></td>
+			<td><?php echo $telefone['contato_id']; ?></td>
 			<td><?php echo $telefone['title']; ?></td>
 			<td><?php echo $telefone['created']; ?></td>
 			<td><?php echo $telefone['modified']; ?></td>

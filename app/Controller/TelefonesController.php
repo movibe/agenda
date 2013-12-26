@@ -56,7 +56,8 @@ class TelefonesController extends AppController {
 			}
 		}
 		$operadoras = $this->Telefone->Operadora->find('list');
-		$this->set(compact('operadoras'));
+		$contatos = $this->Telefone->Contato->find('list');
+		$this->set(compact('operadoras', 'contatos'));
 	}
 
 /**
@@ -82,7 +83,8 @@ class TelefonesController extends AppController {
 			$this->request->data = $this->Telefone->find('first', $options);
 		}
 		$operadoras = $this->Telefone->Operadora->find('list');
-		$this->set(compact('operadoras'));
+		$contatos = $this->Telefone->Contato->find('list');
+		$this->set(compact('operadoras', 'contatos'));
 	}
 
 /**

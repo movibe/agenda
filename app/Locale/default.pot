@@ -1,24 +1,22 @@
 # LANGUAGE translation of CakePHP Application
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: CAKE AGENDA\n"
+"Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2012-09-04 20:03+0000\n"
-"PO-Revision-Date: 2013-12-26 10:52-0300\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Language: pt_BR\n"
-"X-Generator: Poedit 1.6.3\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: Controller/UsersController.php:27
 msgid "Invalid username or password, try again"
-msgstr "Usuário ou "
+msgstr ""
 
 #: Controller/UsersController.php:45;77;113
 msgid "Invalid user"
@@ -60,20 +58,24 @@ msgstr ""
 msgid "Success!"
 msgstr ""
 
-#: View/Elements/form_login.ctp:22 View/Elements/form_users.ctp:26
+#: View/Elements/form_login.ctp:22
+#: View/Elements/form_users.ctp:26
 #: View/Users/home.ctp:14
 msgid "Username"
 msgstr ""
 
-#: View/Elements/form_login.ctp:23 View/Elements/form_users.ctp:36
+#: View/Elements/form_login.ctp:23
+#: View/Elements/form_users.ctp:36
 msgid "Password"
 msgstr ""
 
-#: View/Elements/form_login.ctp:34 View/Users/remember_password.ctp:24
+#: View/Elements/form_login.ctp:34
+#: View/Users/remember_password.ctp:24
 msgid "Forgot your password?"
 msgstr ""
 
-#: View/Elements/form_login.ctp:34 View/Users/remember_password.ctp:31
+#: View/Elements/form_login.ctp:34
+#: View/Users/remember_password.ctp:31
 msgid "Remember my password"
 msgstr ""
 
@@ -89,7 +91,8 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-#: View/Elements/form_users.ctp:56 View/Users/change_password.ctp:50
+#: View/Elements/form_users.ctp:56
+#: View/Users/change_password.ctp:50
 msgid "Submit"
 msgstr ""
 
@@ -97,7 +100,8 @@ msgstr ""
 msgid "Register new password"
 msgstr ""
 
-#: View/Layouts/default.ctp:49 View/Users/register.ctp:2
+#: View/Layouts/default.ctp:49
+#: View/Users/register.ctp:2
 msgid "Register"
 msgstr ""
 
@@ -149,7 +153,7 @@ msgstr ""
 msgid "A username is required."
 msgstr ""
 
-#: Model/User.php:validation for field username;validation email
+#: Model/User.php:validation for field username;validation for field email
 msgid "This user already exists."
 msgstr ""
 
@@ -165,7 +169,8 @@ msgstr ""
 msgid "Please enter a valid role"
 msgstr ""
 
-#: View/Errors/error400.ctp:21 View/Errors/error500.ctp:21
+#: View/Errors/error400.ctp:21
+#: View/Errors/error500.ctp:21
 msgid "Error"
 msgstr ""
 
@@ -180,3 +185,4 @@ msgstr ""
 #: webroot/test.php:87
 msgid "Debug setting does not allow access to this url."
 msgstr ""
+

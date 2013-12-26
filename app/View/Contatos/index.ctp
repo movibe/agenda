@@ -14,15 +14,13 @@
 
 		<div class="col-md-3">
 			<div class="actions">
-				<div class="bs-sidebar hidden-print affix-top">
+				<div class="panel panel-default">
 					<div class="panel-heading">Actions</div>
 						<div class="panel-body">
-							<ul class="nav bs-sidenav">
+							<ul class="nav nav-pills nav-stacked">
 								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Contato'), array('action' => 'add'), array('escape' => false)); ?></li>
 								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Grupos'), array('controller' => 'grupos', 'action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Grupo'), array('controller' => 'grupos', 'action' => 'add'), array('escape' => false)); ?> </li>
-		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Telefones'), array('controller' => 'telefones', 'action' => 'index'), array('escape' => false)); ?> </li>
-		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Telefone'), array('controller' => 'telefones', 'action' => 'add'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Generos'), array('controller' => 'generos', 'action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Genero'), array('controller' => 'generos', 'action' => 'add'), array('escape' => false)); ?> </li>
 							</ul>
@@ -37,7 +35,6 @@
 					<tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
 						<th><?php echo $this->Paginator->sort('grupo_id'); ?></th>
-						<th><?php echo $this->Paginator->sort('telefone_id'); ?></th>
 						<th><?php echo $this->Paginator->sort('genero_id'); ?></th>
 						<th><?php echo $this->Paginator->sort('title'); ?></th>
 						<th><?php echo $this->Paginator->sort('sobrenome'); ?></th>
@@ -54,9 +51,6 @@
 						<td><?php echo h($contato['Contato']['id']); ?>&nbsp;</td>
 								<td>
 			<?php echo $this->Html->link($contato['Grupo']['title'], array('controller' => 'grupos', 'action' => 'view', $contato['Grupo']['id'])); ?>
-		</td>
-								<td>
-			<?php echo $this->Html->link($contato['Telefone']['title'], array('controller' => 'telefones', 'action' => 'view', $contato['Telefone']['id'])); ?>
 		</td>
 								<td>
 			<?php echo $this->Html->link($contato['Genero']['title'], array('controller' => 'generos', 'action' => 'view', $contato['Genero']['id'])); ?>

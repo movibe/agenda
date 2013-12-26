@@ -4,6 +4,17 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title><?php echo $title_for_layout; ?> - <?php echo __('CakeStrap'); ?></title>
+	<?php 
+	echo $this->Html->css(array('bootstrap.min',
+                                'jquery.dataTables',
+                                'themes' . DS . Configure::read('Layout.theme') . DS . 'bootstrap.min'));
+
+                                 ?>
+
+                                 <style type="text/css">
+    	body{ padding: 70px 0px; }
+    </style>
+    
 </head>
 
 <body>

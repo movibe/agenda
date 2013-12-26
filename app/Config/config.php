@@ -3,13 +3,13 @@
 $config = array(
 	'Application' => array(
 		'name' 	  => 'Agenda',
-		'version' => 'v1.0',
-		'status'  => 1,
+		'version' => 'v0.7',
+		'status'  => 0,
 	),
 	'Meta' => array(
 		'title' 	  => 'Agenda',
-		'description' => 'Projeto Cake Agenda',
-		'keywords' 	  => 'agenda, cake',
+		'description' => 'Agenda',
+		'keywords' 	  => '1231',
 	),
 	
 	'Google' => array(

@@ -35,6 +35,7 @@
 					<tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
 						<th><?php echo $this->Paginator->sort('operadora_id'); ?></th>
+						<th><?php echo $this->Paginator->sort('contato_id'); ?></th>
 						<th><?php echo $this->Paginator->sort('title'); ?></th>
 						<th><?php echo $this->Paginator->sort('created'); ?></th>
 						<th><?php echo $this->Paginator->sort('modified'); ?></th>
@@ -48,12 +49,15 @@
 								<td>
 			<?php echo $this->Html->link($telefone['Operadora']['title'], array('controller' => 'operadoras', 'action' => 'view', $telefone['Operadora']['id'])); ?>
 		</td>
+								<td>
+			<?php echo $this->Html->link($telefone['Contato']['title'], array('controller' => 'contatos', 'action' => 'view', $telefone['Contato']['id'])); ?>
+		</td>
 						<td><?php echo h($telefone['Telefone']['title']); ?>&nbsp;</td>
 						<td><?php echo h($telefone['Telefone']['created']); ?>&nbsp;</td>
 						<td><?php echo h($telefone['Telefone']['modified']); ?>&nbsp;</td>
 						<td class="actions">
 							<?php echo $this->Html->link('<span class="glyphicon glyphicon-search"></span>', array('action' => 'view', $telefone['Telefone']['id']), array('escape' => false)); ?>
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit"></span>', array('action' => 'edit', $telefone['Telefone']['id']), array('escape' => false)); ?>
+							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit"></span>', array('action' => 'edit', $telefone['Telefone']['id']),  array('escape' => false)); ?>
 							<?php echo $this->Form->postLink('<span class="glyphicon glyphicon-remove"></span>', array('action' => 'delete', $telefone['Telefone']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $telefone['Telefone']['id'])); ?>
 						</td>
 					</tr>
