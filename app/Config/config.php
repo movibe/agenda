@@ -4,7 +4,7 @@ $config = array(
 	'Application' => array(
 		'name' 	  => 'Agenda',
 		'version' => 'v0.7',
-		'status'  => 0,
+		'status'  => 1,
 	),
 	'Meta' => array(
 		'title' 	  => 'Agenda',

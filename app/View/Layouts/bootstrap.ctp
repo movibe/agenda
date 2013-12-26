@@ -9,9 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-        <!-- Latest compiled and minified JavaScript -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+      var baseUrl = "<?php echo Router::url('/',true);?>";
+  </script>
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -30,6 +31,13 @@
                                 'jquery.dataTables',
                                 'themes' . DS . Configure::read('Layout.theme') . DS . 'bootstrap.min'));
 	?>
+
+<?php echo $this->Html->script(array('lib/modernizr',
+                                'lib/jquery',
+                                'lib/bootstrap.min',
+                                'jquery.dataTables.min')
+                                );?>
+                                
 
 
 
