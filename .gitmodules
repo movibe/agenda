@@ -4,3 +4,6 @@
 [submodule "Plugin/CakePtbr"]
 	path = Plugin/CakePtbr
 	url = https://github.com/jrbasso/cake_ptbr.git
+[submodule "app/Plugin/CakePtbr"]
+	path = app/Plugin/CakePtbr
+	url = https://github.com/jrbasso/cake_ptbr.git
