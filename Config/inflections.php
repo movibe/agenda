@@ -67,7 +67,7 @@ Inflector::rules('singular', array(
 Inflector::rules('plural', array(
 	'rules' => array(
 		'/^(.*)ao$/i' => '\1oes',
-		'/^(.*)(r|s|z)$/i' => '\1\2es',
+		// '/^(.*)(r|s|z)$/i' => '\1\2es',
 		'/^(.*)(a|e|o|u)l$/i' => '\1\2is',
 		'/^(.*)il$/i' => '\1is',
 		'/^(.*)(m|n)$/i' => '\1ns',
