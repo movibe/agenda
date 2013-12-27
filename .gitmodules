@@ -14,3 +14,6 @@
 	path = app/Plugin/Upload
 	url = git://github.com/josegonzalez/cakephp-upload.git
 	branch = master
+[submodule "app/Plugin/BoostCake"]
+	path = app/Plugin/BoostCake
+	url = https://github.com/slywalker/cakephp-plugin-boost_cake.git
