@@ -24,10 +24,11 @@
 
 
 ## Para instalar:
-
-- Edite o arquivo app/Config/config.php
-- Altere o Status para 0
-- Entre na URL e faça a instalação
+1. Execute: git clone https://github.com/movibe/agenda.git agenda
+2. Entre na pasta e rode: git submodule init
+3. Depois: git submodule update 
+4. Edite o arquivo app/Config/config.php e altere o Status para: 0
+5. Entre na URL e faça a instalação
 
 ## Diagrama do Banco de Dados
 - Na pasta db inclui um Diagrama feito no Workbeanch do banco de dados do sistema de Contatos
