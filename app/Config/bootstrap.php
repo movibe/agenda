@@ -183,7 +183,7 @@ if (!Configure::read('Application.status')) {
 */
 Configure::write(
 	'Layout', array(
-		'theme' => 'flatly'
+		'theme' => 'cosmo'
 	)
 );
 

@@ -2,7 +2,7 @@
 
 $config = array(
 	'Application' => array(
-		'name' 	  => 'CakeStrap',
+		'name' 	  => 'Agenda',
 		'version' => 'v0.7',
 		'status'  => 1,
 	),
