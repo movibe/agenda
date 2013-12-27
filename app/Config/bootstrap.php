@@ -167,23 +167,22 @@ if (!Configure::read('Application.status')) {
 
 /**
 * Choose your application theme
-* The list of supported themes are:
-* 	-> default
+* Temas suportados:
 *	-> amelia
 *	-> cerulean
 *	-> cyborg
+*	-> flatly
 *	-> journal
 *	-> readable
 *	-> simplex
 *	-> slate
 *	-> spacelab
-*	-> spruce
-*	-> superhero
 *	-> united
+*	-> yeti
 */
 Configure::write(
 	'Layout', array(
-		'theme' => 'cosmo'
+		'theme' => 'simplex'
 	)
 );
 

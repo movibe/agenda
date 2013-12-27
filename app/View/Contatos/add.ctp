@@ -21,6 +21,8 @@
 																<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Contatos'), array('action' => 'index'), array('escape' => false)); ?></li>
 									<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Grupos'), array('controller' => 'grupos', 'action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Grupo'), array('controller' => 'grupos', 'action' => 'add'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Telefones'), array('controller' => 'telefones', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Telefone'), array('controller' => 'telefones', 'action' => 'add'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Generos'), array('controller' => 'generos', 'action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Genero'), array('controller' => 'generos', 'action' => 'add'), array('escape' => false)); ?> </li>
 							</ul>
@@ -35,10 +37,16 @@
 					<?php echo $this->Form->input('grupo_id', array('class' => 'form-control', 'placeholder' => 'Grupo Id'));?>
 				</div>
 				<div class="form-group">
+					<?php echo $this->Form->input('telefone_id', array('class' => 'form-control', 'placeholder' => 'Telefone Id'));?>
+				</div>
+				<div class="form-group">
 					<?php echo $this->Form->input('genero_id', array('class' => 'form-control', 'placeholder' => 'Genero Id'));?>
 				</div>
 				<div class="form-group">
 					<?php echo $this->Form->input('title', array('class' => 'form-control', 'placeholder' => 'Title'));?>
+				</div>
+				<div class="form-group">
+					<?php echo $this->Form->input('photo', array('class' => 'form-control', 'placeholder' => 'Photo'));?>
 				</div>
 				<div class="form-group">
 					<?php echo $this->Form->input('sobrenome', array('class' => 'form-control', 'placeholder' => 'Sobrenome'));?>

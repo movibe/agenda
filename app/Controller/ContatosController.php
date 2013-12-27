@@ -56,8 +56,9 @@ class ContatosController extends AppController {
 			}
 		}
 		$grupos = $this->Contato->Grupo->find('list');
+		$telefones = $this->Contato->Telefone->find('list');
 		$generos = $this->Contato->Genero->find('list');
-		$this->set(compact('grupos', 'generos'));
+		$this->set(compact('grupos', 'telefones', 'generos'));
 	}
 
 /**
@@ -83,8 +84,9 @@ class ContatosController extends AppController {
 			$this->request->data = $this->Contato->find('first', $options);
 		}
 		$grupos = $this->Contato->Grupo->find('list');
+		$telefones = $this->Contato->Telefone->find('list');
 		$generos = $this->Contato->Genero->find('list');
-		$this->set(compact('grupos', 'generos'));
+		$this->set(compact('grupos', 'telefones', 'generos'));
 	}
 
 /**

@@ -21,6 +21,8 @@
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp&nbsp;New Contato'), array('action' => 'add'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp&nbsp;List Grupos'), array('controller' => 'grupos', 'action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp&nbsp;New Grupo'), array('controller' => 'grupos', 'action' => 'add'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp&nbsp;List Telefones'), array('controller' => 'telefones', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp&nbsp;New Telefone'), array('controller' => 'telefones', 'action' => 'add'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp&nbsp;List Generos'), array('controller' => 'generos', 'action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp&nbsp;New Genero'), array('controller' => 'generos', 'action' => 'add'), array('escape' => false)); ?> </li>
 							</ul>
@@ -47,6 +49,13 @@
 		</td>
 </tr>
 <tr>
+		<th><?php echo __('Telefone'); ?></th>
+		<td>
+			<?php echo $this->Html->link($contato['Telefone']['title'], array('controller' => 'telefones', 'action' => 'view', $contato['Telefone']['id'])); ?>
+			&nbsp;
+		</td>
+</tr>
+<tr>
 		<th><?php echo __('Genero'); ?></th>
 		<td>
 			<?php echo $this->Html->link($contato['Genero']['title'], array('controller' => 'generos', 'action' => 'view', $contato['Genero']['id'])); ?>
@@ -57,6 +66,13 @@
 		<th><?php echo __('Title'); ?></th>
 		<td>
 			<?php echo h($contato['Contato']['title']); ?>
+			&nbsp;
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Photo'); ?></th>
+		<td>
+			<?php echo h($contato['Contato']['photo']); ?>
 			&nbsp;
 		</td>
 </tr>
