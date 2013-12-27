@@ -28,6 +28,7 @@
       <thead>
         <tr>
           <th>#</th>
+          <th><?php echo __('Photo') ?></th>
           <th><?php echo __('Username') ?></th>
           <th><?php echo __('Role') ?></th>
           <th><?php echo __('View') ?></th>
@@ -39,8 +40,10 @@
         <?php foreach( $users as $user ){ ?>
         <tr>
           <td width="50px"><?php echo $user['User']['id'] ?></td>
+          <td><?php echo $user['User']['photo'] ?></td>
           <td><?php echo $user['User']['username'] ?></td>
           <td><?php echo $user['User']['role'] ?></td>
+          
           <td width="50px">
             <?php echo $this->Html->link('<i class="glyphicon glyphicon-search"></i> ' . __('View'),'/users/view/'.$user['User']['username'], array('class' => 'btn btn-info', 
                     'tabindex' => '-1',

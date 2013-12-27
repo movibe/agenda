@@ -2,18 +2,18 @@
 
 $config = array(
 	'Application' => array(
-		'name' 	  => 'Agenda',
-		'version' => 'v1.0',
-		'status'  => 0,
+		'name' 	  => 'CakeStrap',
+		'version' => 'v0.7',
+		'status'  => 1,
 	),
 	'Meta' => array(
 		'title' 	  => 'Agenda',
-		'description' => 'Agenda',
-		'keywords' 	  => '1231',
+		'description' => 'Site de Agenda',
+		'keywords' 	  => 'agenda, site, cake',
 	),
 	
 	'Google' => array(
-		'analytics'  => '123123',
+		'analytics'  => '121213',
 	),
 	
 	'Email' => array(

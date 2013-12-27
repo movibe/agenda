@@ -145,7 +145,8 @@ Cache::config('default', array('engine' => 'File'));
 CakePlugin::load(array(
 'CakePtbr',
 'DebugKit',
-'DataTable'
+'DataTable',
+'Upload'
 // 'Gerenciador' => array(
 //     'bootstrap' => true,
 //     'routes' => true

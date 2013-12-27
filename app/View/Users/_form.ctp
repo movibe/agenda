@@ -21,11 +21,34 @@
     <hr>
       <div class="form-group">
         <?php
+        echo $this->Form->input('name',
+          array(
+            'placeholder' => __('Name'),
+            'class' => 'form-control',
+            'value' => !empty( $user['User']['name'] ) ? $user['User']['name'] : ''
+          )
+        );
+        ?>
+      </div>
+     <div class<div class="form-group">
+        <?php
         echo $this->Form->input('username',
           array(
             'placeholder' => __('Username'),
             'class' => 'form-control',
             'value' => !empty( $user['User']['username'] ) ? $user['User']['username'] : ''
+          )
+        );
+        ?>
+      </div>
+     <div class="form-group">
+      <?php
+        echo $this->Form->input('photo',
+          array(
+            'placeholder' => __('Photo'),
+            'class' => 'form-control',
+            'type' => 'file',
+            'value' => !empty( $user['User']['photo'] ) ? $user['User']['photo'] : ''
           )
         );
         ?>
