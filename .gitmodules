@@ -10,7 +10,3 @@ url=https://github.com/movibe/cake_ptbr.git
 [submodule "app/Plugin/DataTable"]
 	path = app/Plugin/DataTable
 	url = https://github.com/tigrang/cakephp-datatable.git
-[submodule "app/Plugin/Upload"]
-	path = app/Plugin/Upload
-	url = git://github.com/josegonzalez/cakephp-upload.git
-	branch = master
