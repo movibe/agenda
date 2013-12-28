@@ -146,11 +146,11 @@ CakePlugin::load(array(
 'CakePtbr',
 'DebugKit',
 'DataTable',
-'Upload'
-// 'Gerenciador' => array(
-//     'bootstrap' => true,
-//     'routes' => true
-//     )
+// 'Upload'
+'Gerenciador' => array(
+    'bootstrap' => true,
+    'routes' => true
+    )
 ));
 
 include CakePlugin::path('CakePtbr') . 'Config' . DS . 'bootstrap.php';

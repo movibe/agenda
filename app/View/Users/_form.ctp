@@ -41,18 +41,7 @@
         );
         ?>
       </div>
-     <div class="form-group">
-      <?php
-        echo $this->Form->input('photo',
-          array(
-            'placeholder' => __('Photo'),
-            'class' => 'form-control',
-            'type' => 'file',
-            'value' => !empty( $user['User']['photo'] ) ? $user['User']['photo'] : ''
-          )
-        );
-        ?>
-      </div>
+     
       <div class="form-group">
         <?php
         echo $this->Form->input('email',
