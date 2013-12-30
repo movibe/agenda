@@ -46,9 +46,9 @@
 						<td><?php echo h($genero['Genero']['created']); ?>&nbsp;</td>
 						<td><?php echo h($genero['Genero']['modified']); ?>&nbsp;</td>
 						<td class="actions">
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-search"></span>', array('action' => 'view', $genero['Genero']['id']), array('escape' => false)); ?>
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit"></span>', array('action' => 'edit', $genero['Genero']['id']),  array('escape' => false)); ?>
-							<?php echo $this->Form->postLink('<span class="glyphicon glyphicon-remove"></span>', array('action' => 'delete', $genero['Genero']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $genero['Genero']['id'])); ?>
+							<?php echo $this->Html->link('<i class="glyphicon glyphicon-search"></i> ' . __('View'), array('action' => 'view', $genero['Genero']['id']),  array('class' => 'btn btn-info', 'tabindex' => '-1','escape' => false )); ?>
+							<?php echo $this->Html->link('<i class="glyphicon glyphicon-edit"></i> ' . __('Edit'), array('action' => 'edit', $genero['Genero']['id']),  array('class' => 'btn btn-warning', 'tabindex' => '-1','escape' => false )); ?>
+							<?php echo $this->Form->postLink('<i class="glyphicon glyphicon-remove"></i> ' . __('Delete'), array('action' => 'delete', $genero['Genero']['id']), array('class' => 'btn btn-danger', 'tabindex' => '-1','escape' => false), __('Are you sure you want to delete # %s?', $genero['Genero']['id'])); ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>

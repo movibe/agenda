@@ -25,6 +25,13 @@ class GruposController extends AppController {
 		$this->set('grupos', $this->Paginator->paginate());
 	}
 
+
+	public function getGrupos(){
+		$grupos['grupos'] = $this->Grupo->generateTreeList(null,null,null, '_');
+		$this->set($grupos);
+	}
+
+
 /**
  * view method
  *
@@ -36,8 +43,11 @@ class GruposController extends AppController {
 		if (!$this->Grupo->exists($id)) {
 			throw new NotFoundException(__('Invalid grupo'));
 		}
-		$options = array('conditions' => array('Grupo.' . $this->Grupo->primaryKey => $id));
-		$this->set('grupo', $this->Grupo->find('first', $options));
+		// $options = array('conditions' => array('Grupo.' . $this->Grupo->primaryKey => $id));
+		// $this->set('grupo', $this->Grupo->find('first', $options));
+		$d['grupo'] = $this->Grupo->generateTreeList(null,null,null, '--');
+		debug($d);
+		$this->set($d);
 	}
 
 /**
@@ -55,6 +65,7 @@ class GruposController extends AppController {
 				$this->Session->setFlash(__('The grupo could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-error'));
 			}
 		}
+		self::getGrupos();
 	}
 
 /**
@@ -79,6 +90,7 @@ class GruposController extends AppController {
 			$options = array('conditions' => array('Grupo.' . $this->Grupo->primaryKey => $id));
 			$this->request->data = $this->Grupo->find('first', $options);
 		}
+		self::getGrupos();
 	}
 
 /**

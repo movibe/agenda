@@ -19,6 +19,8 @@
 		<li><?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Delete Grupo'), array('action' => 'delete', $grupo['Grupo']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $grupo['Grupo']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp&nbsp;List Grupos'), array('action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp&nbsp;New Grupo'), array('action' => 'add'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp&nbsp;List Grupos'), array('controller' => 'grupos', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp&nbsp;New Parent Grupo'), array('controller' => 'grupos', 'action' => 'add'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp&nbsp;List Contatos'), array('controller' => 'contatos', 'action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp&nbsp;New Contato'), array('controller' => 'contatos', 'action' => 'add'), array('escape' => false)); ?> </li>
 							</ul>
@@ -58,6 +60,27 @@
 			&nbsp;
 		</td>
 </tr>
+<tr>
+		<th><?php echo __('Lft'); ?></th>
+		<td>
+			<?php echo h($grupo['Grupo']['lft']); ?>
+			&nbsp;
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Rght'); ?></th>
+		<td>
+			<?php echo h($grupo['Grupo']['rght']); ?>
+			&nbsp;
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Parent Grupo'); ?></th>
+		<td>
+			<?php echo $this->Html->link($grupo['ParentGrupo']['title'], array('controller' => 'grupos', 'action' => 'view', $grupo['ParentGrupo']['id'])); ?>
+			&nbsp;
+		</td>
+</tr>
 				</tbody>
 			</table>
 
@@ -75,8 +98,10 @@
 	<tr>
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Grupo Id'); ?></th>
+		<th><?php echo __('Telefone Id'); ?></th>
 		<th><?php echo __('Genero Id'); ?></th>
 		<th><?php echo __('Title'); ?></th>
+		<th><?php echo __('Photo'); ?></th>
 		<th><?php echo __('Sobrenome'); ?></th>
 		<th><?php echo __('Apelido'); ?></th>
 		<th><?php echo __('Nascimento'); ?></th>
@@ -90,8 +115,10 @@
 		<tr>
 			<td><?php echo $contato['id']; ?></td>
 			<td><?php echo $contato['grupo_id']; ?></td>
+			<td><?php echo $contato['telefone_id']; ?></td>
 			<td><?php echo $contato['genero_id']; ?></td>
 			<td><?php echo $contato['title']; ?></td>
+			<td><?php echo $contato['photo']; ?></td>
 			<td><?php echo $contato['sobrenome']; ?></td>
 			<td><?php echo $contato['apelido']; ?></td>
 			<td><?php echo $contato['nascimento']; ?></td>
@@ -110,6 +137,49 @@
 
 	<div class="actions">
 		<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Contato'), array('controller' => 'contatos', 'action' => 'add'), array('escape' => false, 'class' => 'btn btn-default')); ?> 
+	</div>
+	</div><!-- end col md 12 -->
+</div>
+<div class="related row">
+	<div class="col-md-12">
+	<h3><?php echo __('Related Grupos'); ?></h3>
+	<?php if (!empty($grupo['ChildGrupo'])): ?>
+	<table cellpadding = "0" cellspacing = "0" class="table table-striped">
+	<thead>
+	<tr>
+		<th><?php echo __('Id'); ?></th>
+		<th><?php echo __('Title'); ?></th>
+		<th><?php echo __('Created'); ?></th>
+		<th><?php echo __('Modified'); ?></th>
+		<th><?php echo __('Lft'); ?></th>
+		<th><?php echo __('Rght'); ?></th>
+		<th><?php echo __('Parent Id'); ?></th>
+		<th class="actions"></th>
+	</tr>
+	<thead>
+	<tbody>
+	<?php foreach ($grupo['ChildGrupo'] as $childGrupo): ?>
+		<tr>
+			<td><?php echo $childGrupo['id']; ?></td>
+			<td><?php echo $childGrupo['title']; ?></td>
+			<td><?php echo $childGrupo['created']; ?></td>
+			<td><?php echo $childGrupo['modified']; ?></td>
+			<td><?php echo $childGrupo['lft']; ?></td>
+			<td><?php echo $childGrupo['rght']; ?></td>
+			<td><?php echo $childGrupo['parent_id']; ?></td>
+			<td class="actions">
+				<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-search"></span>'), array('controller' => 'grupos', 'action' => 'view', $childGrupo['id']), array('escape' => false)); ?>
+				<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-edit"></span>'), array('controller' => 'grupos', 'action' => 'edit', $childGrupo['id']), array('escape' => false)); ?>
+				<?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>'), array('controller' => 'grupos', 'action' => 'delete', $childGrupo['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $childGrupo['id'])); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</tbody>
+	</table>
+<?php endif; ?>
+
+	<div class="actions">
+		<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Child Grupo'), array('controller' => 'grupos', 'action' => 'add'), array('escape' => false, 'class' => 'btn btn-default')); ?> 
 	</div>
 	</div><!-- end col md 12 -->
 </div>

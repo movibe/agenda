@@ -75,8 +75,10 @@
 	<tr>
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Grupo Id'); ?></th>
+		<th><?php echo __('Telefone Id'); ?></th>
 		<th><?php echo __('Genero Id'); ?></th>
 		<th><?php echo __('Title'); ?></th>
+		<th><?php echo __('Photo'); ?></th>
 		<th><?php echo __('Sobrenome'); ?></th>
 		<th><?php echo __('Apelido'); ?></th>
 		<th><?php echo __('Nascimento'); ?></th>
@@ -90,8 +92,10 @@
 		<tr>
 			<td><?php echo $contato['id']; ?></td>
 			<td><?php echo $contato['grupo_id']; ?></td>
+			<td><?php echo $contato['telefone_id']; ?></td>
 			<td><?php echo $contato['genero_id']; ?></td>
 			<td><?php echo $contato['title']; ?></td>
+			<td><?php echo $contato['photo']; ?></td>
 			<td><?php echo $contato['sobrenome']; ?></td>
 			<td><?php echo $contato['apelido']; ?></td>
 			<td><?php echo $contato['nascimento']; ?></td>
