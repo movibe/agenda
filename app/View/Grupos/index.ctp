@@ -56,9 +56,9 @@
 			<?php echo $this->Html->link($grupo['ParentGrupo']['title'], array('controller' => 'grupos', 'action' => 'view', $grupo['ParentGrupo']['id'])); ?>
 		</td>
 						<td class="actions">
-							<?php echo $this->Html->link('<i class="glyphicon glyphicon-search"></i> ' . __('View'), array('action' => 'view', $grupo['Grupo']['id']),  array('class' => 'btn btn-info', 'tabindex' => '-1','escape' => false )); ?>
-							<?php echo $this->Html->link('<i class="glyphicon glyphicon-edit"></i> ' . __('Edit'), array('action' => 'edit', $grupo['Grupo']['id']),  array('class' => 'btn btn-warning', 'tabindex' => '-1','escape' => false )); ?>
-							<?php echo $this->Form->postLink('<i class="glyphicon glyphicon-remove"></i> ' . __('Delete'), array('action' => 'delete', $grupo['Grupo']['id']), array('class' => 'btn btn-danger', 'tabindex' => '-1','escape' => false), __('Are you sure you want to delete # %s?', $grupo['Grupo']['id'])); ?>
+							<?php echo $this->Html->link('<i class="glyphicon glyphicon-search"></i> ' , array('action' => 'view', $grupo['Grupo']['id']),  array('class' => 'btn btn-info', 'tabindex' => '-1','escape' => false )); ?>
+							<?php echo $this->Html->link('<i class="glyphicon glyphicon-edit"></i> ' , array('action' => 'edit', $grupo['Grupo']['id']),  array('class' => 'btn btn-warning', 'tabindex' => '-1','escape' => false )); ?>
+							<?php echo $this->Form->postLink('<i class="glyphicon glyphicon-remove"></i> ', array('action' => 'delete', $grupo['Grupo']['id']), array('class' => 'btn btn-danger', 'tabindex' => '-1','escape' => false), __('Are you sure you want to delete # %s?', $grupo['Grupo']['id'])); ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>
