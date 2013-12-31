@@ -20,9 +20,16 @@ class GruposController extends AppController {
  *
  * @return void
  */
+	
+	public function getGrupos(){
+		$s['grupos'] = $this->Grupo->generateTreeList(null,null, null, '--');
+		$this->set($s);
+	}
 	public function index() {
 		$this->Grupo->recursive = 0;
 		$this->set('grupos', $this->Paginator->paginate());
+
+		self::getGrupos();
 	}
 
 /**
@@ -55,8 +62,7 @@ class GruposController extends AppController {
 				$this->Session->setFlash(__('The grupo could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-error'));
 			}
 		}
-		$parentGrupos = $this->Grupo->ParentGrupo->find('list');
-		$this->set(compact('parentGrupos'));
+		self::getGrupos();
 	}
 
 /**
@@ -81,8 +87,7 @@ class GruposController extends AppController {
 			$options = array('conditions' => array('Grupo.' . $this->Grupo->primaryKey => $id));
 			$this->request->data = $this->Grupo->find('first', $options);
 		}
-		$parentGrupos = $this->Grupo->ParentGrupo->find('list');
-		$this->set(compact('parentGrupos'));
+		self::getGrupos();
 	}
 
 /**

@@ -21,8 +21,6 @@
 																<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Grupos'), array('action' => 'index'), array('escape' => false)); ?></li>
 									<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Grupos'), array('controller' => 'grupos', 'action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Parent Grupo'), array('controller' => 'grupos', 'action' => 'add'), array('escape' => false)); ?> </li>
-		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Contatos'), array('controller' => 'contatos', 'action' => 'index'), array('escape' => false)); ?> </li>
-		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Contato'), array('controller' => 'contatos', 'action' => 'add'), array('escape' => false)); ?> </li>
 							</ul>
 						</div>
 					</div>
@@ -35,13 +33,7 @@
 					<?php echo $this->Form->input('title', array('class' => 'form-control', 'placeholder' => 'Title'));?>
 				</div>
 				<div class="form-group">
-					<?php echo $this->Form->input('lft', array('class' => 'form-control', 'placeholder' => 'Lft'));?>
-				</div>
-				<div class="form-group">
-					<?php echo $this->Form->input('rght', array('class' => 'form-control', 'placeholder' => 'Rght'));?>
-				</div>
-				<div class="form-group">
-					<?php echo $this->Form->input('parent_id', array('class' => 'form-control', 'placeholder' => 'Parent Id'));?>
+					<?php echo $this->Form->input('parent_id', array( 'options'=>$gruops, 'empty'=> ' -- Selecione --',  'class' => 'form-control', 'placeholder' => 'Parent Id'));?>
 				</div>
 				<div class="form-group">
 					<?php echo $this->Form->submit( __('Submit'), array('class' => 'btn btn-success') , array('escape' => false) ); ?>
