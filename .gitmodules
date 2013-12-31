@@ -1,6 +1,3 @@
-[submodule "app/Plugin/CakePtbr"]
-	path = app/Plugin/CakePtbr
-url=https://github.com/movibe/cake_ptbr.git
 [submodule "app/Plugin/DebugKit"]
 	path = app/Plugin/DebugKit
 	url = https://github.com/cakephp/debug_kit.git
