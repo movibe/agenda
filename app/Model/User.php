@@ -14,6 +14,7 @@ class User extends AppModel
     return true;
   }
 
+   
   public $validate = array(
     'username' => array(
       array(

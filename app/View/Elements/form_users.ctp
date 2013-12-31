@@ -7,7 +7,8 @@ echo $this->Form->create
 		'url' => array
 		(
 			'controller' => 'users',
-			'action'	 => $action
+			'action'	 => $action,
+			'type'=> 'file'
 		),
 		'class'			=> 'form-horizontal form-signin',
 		'inputDefaults' => array
@@ -27,6 +28,17 @@ echo $this->Form->input('username',
 		'value' => !empty( $user['User']['username'] ) ? $user['User']['username'] : ''
 	)
 );
+
+echo $this->Form->input('photo',
+	array(
+		'placeholder' => __('Photo'),
+		'class' => 'form-control',
+		'type' => 'file'
+		'value' => !empty( $user['User']['photo'] ) ? $user['User']['photo'] : ''
+	)
+);
+
+
 echo $this->Form->input('email',
 	array(
 		'type' => 'text',

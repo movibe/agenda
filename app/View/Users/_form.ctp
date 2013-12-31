@@ -21,6 +21,17 @@
     <hr>
       <div class="form-group">
         <?php
+        echo $this->Form->input('name',
+          array(
+            'placeholder' => __('Name'),
+            'class' => 'form-control',
+            'value' => !empty( $user['User']['name'] ) ? $user['User']['name'] : ''
+          )
+        );
+        ?>
+      </div>
+     <div class<div class="form-group">
+        <?php
         echo $this->Form->input('username',
           array(
             'placeholder' => __('Username'),
@@ -30,6 +41,7 @@
         );
         ?>
       </div>
+     
       <div class="form-group">
         <?php
         echo $this->Form->input('email',

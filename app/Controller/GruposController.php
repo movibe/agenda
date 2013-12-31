@@ -55,6 +55,8 @@ class GruposController extends AppController {
 				$this->Session->setFlash(__('The grupo could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-error'));
 			}
 		}
+		$parentGrupos = $this->Grupo->ParentGrupo->find('list');
+		$this->set(compact('parentGrupos'));
 	}
 
 /**
@@ -79,6 +81,8 @@ class GruposController extends AppController {
 			$options = array('conditions' => array('Grupo.' . $this->Grupo->primaryKey => $id));
 			$this->request->data = $this->Grupo->find('first', $options);
 		}
+		$parentGrupos = $this->Grupo->ParentGrupo->find('list');
+		$this->set(compact('parentGrupos'));
 	}
 
 /**

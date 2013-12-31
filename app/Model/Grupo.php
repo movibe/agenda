@@ -3,9 +3,20 @@ App::uses('AppModel', 'Model');
 /**
  * Grupo Model
  *
+ * @property Grupo $ParentGrupo
  * @property Contato $Contato
+ * @property Grupo $ChildGrupo
  */
 class Grupo extends AppModel {
+
+/**
+ * Behaviors
+ *
+ * @var array
+ */
+	public $actsAs = array(
+		'Tree',
+	);
 
 /**
  * Validation rules
@@ -28,6 +39,21 @@ class Grupo extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'ParentGrupo' => array(
+			'className' => 'Grupo',
+			'foreignKey' => 'parent_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
+
+/**
  * hasMany associations
  *
  * @var array
@@ -36,6 +62,19 @@ class Grupo extends AppModel {
 		'Contato' => array(
 			'className' => 'Contato',
 			'foreignKey' => 'grupo_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'ChildGrupo' => array(
+			'className' => 'Grupo',
+			'foreignKey' => 'parent_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',

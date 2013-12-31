@@ -27,7 +27,8 @@
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 
-    echo $this->Html->css(array('bootstrap.min',
+    echo $this->Html->css(array(
+                                'bootstrap.min',
                                 'jquery.dataTables',
                                 'themes' . DS . Configure::read('Layout.theme') . DS . 'bootstrap.min'));
 	?>

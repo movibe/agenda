@@ -82,7 +82,7 @@ class AppController extends Controller
 	  }
 
     # To enable portuguese language as main
-    Configure::write('Config.language', 'por');
+    // Configure::write('Config.language', 'por');
   }
 
   public function beforeRender() {

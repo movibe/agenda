@@ -145,11 +145,12 @@ Cache::config('default', array('engine' => 'File'));
 CakePlugin::load(array(
 'CakePtbr',
 'DebugKit',
-'DataTable'
-// 'Gerenciador' => array(
-//     'bootstrap' => true,
-//     'routes' => true
-//     )
+'DataTable',
+// 'Upload'
+'Gerenciador' => array(
+    'bootstrap' => true,
+    'routes' => true
+    )
 ));
 
 include CakePlugin::path('CakePtbr') . 'Config' . DS . 'bootstrap.php';
@@ -166,19 +167,18 @@ if (!Configure::read('Application.status')) {
 
 /**
 * Choose your application theme
-* The list of supported themes are:
-* 	-> default
+* Temas suportados:
 *	-> amelia
 *	-> cerulean
 *	-> cyborg
+*	-> flatly
 *	-> journal
 *	-> readable
 *	-> simplex
 *	-> slate
 *	-> spacelab
-*	-> spruce
-*	-> superhero
 *	-> united
+*	-> yeti
 */
 Configure::write(
 	'Layout', array(

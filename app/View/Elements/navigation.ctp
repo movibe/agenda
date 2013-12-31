@@ -21,12 +21,21 @@
             </li>
             <?php } ?>
 
-
+            <!-- Contatos -->
             <?php if( AuthComponent::user('role') == 'admin' ) { ?>
             <li class="<?php echo $this->params->controller == 'contatos' ? 'active' : '';  ?>">
               <?php echo $this->Html->link('Contatos','/contatos') ?>
             </li>
             <?php } ?>
+
+            <!-- Fotos -->
+            <?php if( AuthComponent::user('role') == 'admin' ) { ?>
+            <li class="<?php echo $this->params->controller == 'gerenciador' ? 'active' : '';  ?>">
+              <?php echo $this->Html->link('Fotos','/gerenciador') ?>
+            </li>
+            <?php } ?>
+
+
           </ul>
 
           <?php if (AuthComponent::user('id')): ?>

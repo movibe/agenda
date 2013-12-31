@@ -1,9 +1,9 @@
-<div class="generos index">
+<div class="grupos index">
 
 	<div class="row">
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1><?php echo __('Generos'); ?></h1>
+				<h1><?php echo __('Grupos'); ?></h1>
 			</div>
 		</div><!-- end col md 12 -->
 	</div><!-- end row -->
@@ -18,7 +18,7 @@
 					<div class="panel-heading">Actions</div>
 						<div class="panel-body">
 							<ul class="nav nav-pills nav-stacked">
-								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Genero'), array('action' => 'add'), array('escape' => false)); ?></li>
+								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Grupo'), array('action' => 'add'), array('escape' => false)); ?></li>
 								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Contatos'), array('controller' => 'contatos', 'action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Contato'), array('controller' => 'contatos', 'action' => 'add'), array('escape' => false)); ?> </li>
 							</ul>
@@ -39,16 +39,16 @@
 					</tr>
 				</thead>
 				<tbody>
-				<?php foreach ($generos as $genero): ?>
+				<?php foreach ($grupos as $grupo): ?>
 					<tr>
-						<td><?php echo h($genero['Genero']['id']); ?>&nbsp;</td>
-						<td><?php echo h($genero['Genero']['title']); ?>&nbsp;</td>
-						<td><?php echo h($genero['Genero']['created']); ?>&nbsp;</td>
-						<td><?php echo h($genero['Genero']['modified']); ?>&nbsp;</td>
+						<td><?php echo h($grupo['Grupo']['id']); ?>&nbsp;</td>
+						<td><?php echo h($grupo['Grupo']['title']); ?>&nbsp;</td>
+						<td><?php echo h($grupo['Grupo']['created']); ?>&nbsp;</td>
+						<td><?php echo h($grupo['Grupo']['modified']); ?>&nbsp;</td>
 						<td class="actions">
-							<?php echo $this->Html->link('<i class="glyphicon glyphicon-search"></i> ' . __('View'), array('action' => 'view', $genero['Genero']['id']),  array('class' => 'btn btn-info', 'tabindex' => '-1','escape' => false )); ?>
-							<?php echo $this->Html->link('<i class="glyphicon glyphicon-edit"></i> ' . __('Edit'), array('action' => 'edit', $genero['Genero']['id']),  array('class' => 'btn btn-warning', 'tabindex' => '-1','escape' => false )); ?>
-							<?php echo $this->Form->postLink('<i class="glyphicon glyphicon-remove"></i> ' . __('Delete'), array('action' => 'delete', $genero['Genero']['id']), array('class' => 'btn btn-danger', 'tabindex' => '-1','escape' => false), __('Are you sure you want to delete # %s?', $genero['Genero']['id'])); ?>
+							<?php echo $this->Html->link('<i class="glyphicon glyphicon-search"></i> ' . __('View'), array('action' => 'view', $grupo['Grupo']['id']),  array('class' => 'btn btn-info', 'tabindex' => '-1','escape' => false )); ?>
+							<?php echo $this->Html->link('<i class="glyphicon glyphicon-edit"></i> ' . __('Edit'), array('action' => 'edit', $grupo['Grupo']['id']),  array('class' => 'btn btn-warning', 'tabindex' => '-1','escape' => false )); ?>
+							<?php echo $this->Form->postLink('<i class="glyphicon glyphicon-remove"></i> ' . __('Delete'), array('action' => 'delete', $grupo['Grupo']['id']), array('class' => 'btn btn-danger', 'tabindex' => '-1','escape' => false), __('Are you sure you want to delete # %s?', $grupo['Grupo']['id'])); ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>
