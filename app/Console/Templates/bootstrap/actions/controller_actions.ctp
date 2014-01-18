@@ -55,12 +55,12 @@
 			$this-><?php echo $currentModelName; ?>->create();
 			if ($this-><?php echo $currentModelName; ?>->save($this->request->data)) {
 <?php if ($wannaUseSession): ?>
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), 'default', array('class' => 'alert alert-success'));
+				$this->Session->setFlash(__('O campo <?php echo strtolower($singularHumanName); ?> foi alterado.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-error'));
+				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> nao foi alterado. Por favor, tente novamente.'), 'default', array('class' => 'alert alert-error'));
 <?php else: ?>
-				return $this->flash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), array('action' => 'index'));
+				return $this->flash(__('O campo <?php echo strtolower($singularHumanName); ?> foi alterado.'), array('action' => 'index'));
 <?php endif; ?>
 			}
 		}
@@ -96,12 +96,12 @@
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this-><?php echo $currentModelName; ?>->save($this->request->data)) {
 <?php if ($wannaUseSession): ?>
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), 'default', array('class' => 'alert alert-success'));
+				$this->Session->setFlash(__('O campo <?php echo strtolower($singularHumanName); ?> foi alterado.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The <?php echo strtolower($singularHumanName); ?> could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-error'));
+				$this->Session->setFlash(__('O campo <?php echo strtolower($singularHumanName); ?> nao foi alterado. Por favor, tente novamente.'), 'default', array('class' => 'alert alert-error'));
 <?php else: ?>
-				return $this->flash(__('The <?php echo strtolower($singularHumanName); ?> has been saved.'), array('action' => 'index'));
+				return $this->flash(__('O campo <?php echo strtolower($singularHumanName); ?> foi alterado.'), array('action' => 'index'));
 <?php endif; ?>
 			}
 		} else {

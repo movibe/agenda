@@ -16,7 +16,7 @@
 						<div class="panel-body">
 							<ul class="nav nav-pills nav-stacked">
 									<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-edit"></span>&nbsp&nbsp;Edit Operadora'), array('action' => 'edit', $operadora['Operadora']['id']), array('escape' => false)); ?> </li>
-		<li><?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Delete Operadora'), array('action' => 'delete', $operadora['Operadora']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $operadora['Operadora']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Delete Operadora'), array('action' => 'delete', $operadora['Operadora']['id']), array('escape' => false), __('Tem certeza que deseja deletar o registro # %s?', $operadora['Operadora']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp&nbsp;List Operadoras'), array('action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp&nbsp;New Operadora'), array('action' => 'add'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp&nbsp;List Telefones'), array('controller' => 'telefones', 'action' => 'index'), array('escape' => false)); ?> </li>
@@ -75,7 +75,6 @@
 	<tr>
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Operadora Id'); ?></th>
-		<th><?php echo __('Contato Id'); ?></th>
 		<th><?php echo __('Title'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
@@ -87,14 +86,13 @@
 		<tr>
 			<td><?php echo $telefone['id']; ?></td>
 			<td><?php echo $telefone['operadora_id']; ?></td>
-			<td><?php echo $telefone['contato_id']; ?></td>
 			<td><?php echo $telefone['title']; ?></td>
 			<td><?php echo $telefone['created']; ?></td>
 			<td><?php echo $telefone['modified']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-search"></span>'), array('controller' => 'telefones', 'action' => 'view', $telefone['id']), array('escape' => false)); ?>
 				<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-edit"></span>'), array('controller' => 'telefones', 'action' => 'edit', $telefone['id']), array('escape' => false)); ?>
-				<?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>'), array('controller' => 'telefones', 'action' => 'delete', $telefone['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $telefone['id'])); ?>
+				<?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>'), array('controller' => 'telefones', 'action' => 'delete', $telefone['id']), array('escape' => false), __('Tem certeza que deseja deletar o registro # %s?', $telefone['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>

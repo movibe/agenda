@@ -49,10 +49,10 @@ class OperadorasController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Operadora->create();
 			if ($this->Operadora->save($this->request->data)) {
-				$this->Session->setFlash(__('The operadora has been saved.'), 'default', array('class' => 'alert alert-success'));
+				$this->Session->setFlash(__('O campo operadora foi alterado.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The operadora could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-error'));
+				$this->Session->setFlash(__('The operadora nao foi alterado. Por favor, tente novamente.'), 'default', array('class' => 'alert alert-error'));
 			}
 		}
 	}
@@ -70,10 +70,10 @@ class OperadorasController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Operadora->save($this->request->data)) {
-				$this->Session->setFlash(__('The operadora has been saved.'), 'default', array('class' => 'alert alert-success'));
+				$this->Session->setFlash(__('O campo operadora foi alterado.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The operadora could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-error'));
+				$this->Session->setFlash(__('O campo operadora nao foi alterado. Por favor, tente novamente.'), 'default', array('class' => 'alert alert-error'));
 			}
 		} else {
 			$options = array('conditions' => array('Operadora.' . $this->Operadora->primaryKey => $id));

@@ -46,9 +46,9 @@
 						<td><?php echo h($operadora['Operadora']['created']); ?>&nbsp;</td>
 						<td><?php echo h($operadora['Operadora']['modified']); ?>&nbsp;</td>
 						<td class="actions">
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-search"></span>', array('action' => 'view', $operadora['Operadora']['id']), array('escape' => false)); ?>
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit"></span>', array('action' => 'edit', $operadora['Operadora']['id']),  array('escape' => false)); ?>
-							<?php echo $this->Form->postLink('<span class="glyphicon glyphicon-remove"></span>', array('action' => 'delete', $operadora['Operadora']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $operadora['Operadora']['id'])); ?>
+							<?php echo $this->Html->link('<i class="glyphicon glyphicon-search"></i> ' , array('action' => 'view', $operadora['Operadora']['id']),  array('class' => 'btn btn-info', 'tabindex' => '-1','escape' => false )); ?>
+							<?php echo $this->Html->link('<i class="glyphicon glyphicon-edit"></i> ' , array('action' => 'edit', $operadora['Operadora']['id']),  array('class' => 'btn btn-warning', 'tabindex' => '-1','escape' => false )); ?>
+							<?php echo $this->Form->postLink('<i class="glyphicon glyphicon-remove"></i> ', array('action' => 'delete', $operadora['Operadora']['id']), array('class' => 'btn btn-danger', 'tabindex' => '-1','escape' => false), __('Tem certeza que deseja deletar o registro # %s?', $operadora['Operadora']['id'])); ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>
@@ -56,7 +56,7 @@
 			</table>
 
 			<p>
-				<small><?php echo $this->Paginator->counter(array('format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')));?></small>
+				<small><?php echo $this->Paginator->counter(array('format' => __('Página {:page} de {:pages}, exibindo {:current} registros de {:count}, começando em {:start}, finalizado em {:end}')));?></small>
 			</p>
 
 			<?php

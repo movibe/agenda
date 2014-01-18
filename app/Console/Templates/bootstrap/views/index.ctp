@@ -90,7 +90,7 @@
 				/* echo "\t\t\t\t\t\t<td class=\"actions\">\n";
 				echo "\t\t\t\t\t\t\t<?php echo \$this->Html->link('<i class=\"glyphicon glyphicon-search\"></i> ' . __('View'), array('action' => 'view', \${$singularVar}['{$modelClass}']['{$primaryKey}']),  array('class' => 'btn btn-info', 'tabindex' => '-1','escape' => false )); ?>\n";
 				echo "\t\t\t\t\t\t\t<?php echo \$this->Html->link('<i class=\"glyphicon glyphicon-edit\"></i> ' . __('Edit'), array('action' => 'edit', \${$singularVar}['{$modelClass}']['{$primaryKey}']),  array('class' => 'btn btn-warning', 'tabindex' => '-1','escape' => false )); ?>\n";
-				echo "\t\t\t\t\t\t\t<?php echo \$this->Form->postLink('<i class=\"glyphicon glyphicon-remove\"></i> ' . __('Delete'), array('action' => 'delete', \${$singularVar}['{$modelClass}']['{$primaryKey}']), array('class' => 'btn btn-danger', 'tabindex' => '-1','escape' => false), __('Are you sure you want to delete # %s?', \${$singularVar}['{$modelClass}']['{$primaryKey}'])); ?>\n";
+				echo "\t\t\t\t\t\t\t<?php echo \$this->Form->postLink('<i class=\"glyphicon glyphicon-remove\"></i> ' . __('Delete'), array('action' => 'delete', \${$singularVar}['{$modelClass}']['{$primaryKey}']), array('class' => 'btn btn-danger', 'tabindex' => '-1','escape' => false), __('Tem certeza que deseja deletar o registro # %s?', \${$singularVar}['{$modelClass}']['{$primaryKey}'])); ?>\n";
 				echo "\t\t\t\t\t\t</td>\n"; */
 
 
@@ -98,7 +98,7 @@
 				echo "\t\t\t\t\t\t<td class=\"actions\">\n";
 				echo "\t\t\t\t\t\t\t<?php echo \$this->Html->link('<i class=\"glyphicon glyphicon-search\"></i> ' , array('action' => 'view', \${$singularVar}['{$modelClass}']['{$primaryKey}']),  array('class' => 'btn btn-info', 'tabindex' => '-1','escape' => false )); ?>\n";
 				echo "\t\t\t\t\t\t\t<?php echo \$this->Html->link('<i class=\"glyphicon glyphicon-edit\"></i> ' , array('action' => 'edit', \${$singularVar}['{$modelClass}']['{$primaryKey}']),  array('class' => 'btn btn-warning', 'tabindex' => '-1','escape' => false )); ?>\n";
-				echo "\t\t\t\t\t\t\t<?php echo \$this->Form->postLink('<i class=\"glyphicon glyphicon-remove\"></i> ', array('action' => 'delete', \${$singularVar}['{$modelClass}']['{$primaryKey}']), array('class' => 'btn btn-danger', 'tabindex' => '-1','escape' => false), __('Are you sure you want to delete # %s?', \${$singularVar}['{$modelClass}']['{$primaryKey}'])); ?>\n";
+				echo "\t\t\t\t\t\t\t<?php echo \$this->Form->postLink('<i class=\"glyphicon glyphicon-remove\"></i> ', array('action' => 'delete', \${$singularVar}['{$modelClass}']['{$primaryKey}']), array('class' => 'btn btn-danger', 'tabindex' => '-1','escape' => false), __('Tem certeza que deseja deletar o registro # %s?', \${$singularVar}['{$modelClass}']['{$primaryKey}'])); ?>\n";
 				echo "\t\t\t\t\t\t</td>\n";
 			echo "\t\t\t\t\t</tr>\n";
 
@@ -108,7 +108,7 @@
 			</table>
 
 			<p>
-				<small><?php echo "<?php echo \$this->Paginator->counter(array('format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')));?>"; ?></small>
+				<small><?php echo "<?php echo \$this->Paginator->counter(array('format' => __('Página {:page} de {:pages}, exibindo {:current} registros de {:count}, começando em {:start}, finalizado em {:end}')));?>"; ?></small>
 			</p>
 
 			<?php

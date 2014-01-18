@@ -32,7 +32,7 @@
 			__d('cake', 'Delete'),
 			array('action' => 'delete', $this->Form->value($modelClass . '.' . $primaryKey)),
 			null,
-			__d('cake', 'Are you sure you want to delete # %s?', $this->Form->value($modelClass . '.' . $primaryKey)));
+			__d('cake', 'Tem certeza que deseja deletar o registro # %s?', $this->Form->value($modelClass . '.' . $primaryKey)));
 		?></li>
 <?php endif; ?>
 		<li><?php echo $this->Html->link(__d('cake', 'List') . ' ' . $pluralHumanName, array('action' => 'index')); ?></li>

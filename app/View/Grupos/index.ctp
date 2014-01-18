@@ -19,8 +19,8 @@
 						<div class="panel-body">
 							<ul class="nav nav-pills nav-stacked">
 								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Grupo'), array('action' => 'add'), array('escape' => false)); ?></li>
-								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Grupos'), array('controller' => 'grupos', 'action' => 'index'), array('escape' => false)); ?> </li>
-		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Parent Grupo'), array('controller' => 'grupos', 'action' => 'add'), array('escape' => false)); ?> </li>
+								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Contatos'), array('controller' => 'contatos', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Contato'), array('controller' => 'contatos', 'action' => 'add'), array('escape' => false)); ?> </li>
 							</ul>
 						</div><!-- end body -->
 				</div><!-- end panel -->
@@ -50,9 +50,7 @@
 						<td><?php echo h($grupo['Grupo']['modified']); ?>&nbsp;</td>
 						<td><?php echo h($grupo['Grupo']['lft']); ?>&nbsp;</td>
 						<td><?php echo h($grupo['Grupo']['rght']); ?>&nbsp;</td>
-								<td>
-			<?php echo $this->Html->link($grupo['ParentGrupo']['title'], array('controller' => 'grupos', 'action' => 'view', $grupo['ParentGrupo']['id'])); ?>
-		</td>
+						<td><?php echo h($grupo['Grupo']['parent_id']); ?>&nbsp;</td>
 						<td class="actions">
 							<?php echo $this->Html->link('<i class="glyphicon glyphicon-search"></i> ' , array('action' => 'view', $grupo['Grupo']['id']),  array('class' => 'btn btn-info', 'tabindex' => '-1','escape' => false )); ?>
 							<?php echo $this->Html->link('<i class="glyphicon glyphicon-edit"></i> ' , array('action' => 'edit', $grupo['Grupo']['id']),  array('class' => 'btn btn-warning', 'tabindex' => '-1','escape' => false )); ?>

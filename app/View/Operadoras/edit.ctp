@@ -18,7 +18,7 @@
 						<div class="panel-body">
 							<ul class="nav nav-pills nav-stacked">
 
-																<li><?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Delete'), array('action' => 'delete', $this->Form->value('Operadora.id')), array('escape' => false), __('Are you sure you want to delete # %s?', $this->Form->value('Operadora.id'))); ?></li>
+																<li><?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Delete'), array('action' => 'delete', $this->Form->value('Operadora.id')), array('escape' => false), __('Tem certeza que deseja deletar o registro # %s?', $this->Form->value('Operadora.id'))); ?></li>
 																<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Operadoras'), array('action' => 'index'), array('escape' => false)); ?></li>
 									<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Telefones'), array('controller' => 'telefones', 'action' => 'index'), array('escape' => false)); ?> </li>
 		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Telefone'), array('controller' => 'telefones', 'action' => 'add'), array('escape' => false)); ?> </li>
@@ -37,7 +37,7 @@
 					<?php echo $this->Form->input('title', array('class' => 'form-control', 'placeholder' => 'Title'));?>
 				</div>
 				<div class="form-group">
-					<?php echo '<span class="glyphicon glyphicon-edit"></span>' . $this->Form->submit( __('Submit'), array('class' => 'btn btn-success') , array('escape' => false) ); ?>
+					<?php echo $this->Form->submit( __('Submit'), array('class' => 'btn btn-success') , array('escape' => false) ); ?>
 				</div>
 
 			<?php echo $this->Form->end() ?>
