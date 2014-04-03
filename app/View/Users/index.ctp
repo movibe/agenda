@@ -29,8 +29,10 @@
         <tr>
           <th>#</th>
           <th><?php echo __('Photo') ?></th>
-          <th><?php echo __('Username') ?></th>
-          <th><?php echo __('Role') ?></th>
+          <th><?php echo __('Nome') ?></th>
+          <th><?php echo __('Login') ?></th>
+          <th><?php echo __('Email') ?></th>
+          <th><?php echo __('Grupo') ?></th>
           <th><?php echo __('View') ?></th>
           <th><?php echo __('Edit') ?></th>
           <th><?php echo __('Delete') ?></th>
@@ -40,8 +42,11 @@
         <?php foreach( $users as $user ){ ?>
         <tr>
           <td width="50px"><?php echo $user['User']['id'] ?></td>
-          <td><?php echo $user['User']['photo'] ?></td>
+          <td><img src="<?php echo $user['User']['photo'] ?>" alt="" width="60" class="img-thumbnail"></td>
+          <!-- <td><?php echo $user['User']['photo'] ?></td> -->
+          <td><?php echo $user['User']['name'] ?></td>
           <td><?php echo $user['User']['username'] ?></td>
+          <td><?php echo $user['User']['email'] ?></td>
           <td><?php echo $user['User']['role'] ?></td>
           
           <td width="50px">

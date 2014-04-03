@@ -42,8 +42,9 @@
           <ul class="nav navbar-nav navbar-right">
             <li id="fat-menu" class="dropdown">
               <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="glyphicon glyphicon-user"></i>
-                <?php echo AuthComponent::user('username') ?> <b class="caret"></b>
+                <!-- <i class="glyphicon glyphicon-user"></i> -->
+                <img src="<?php echo $this->params->base . DS .  AuthComponent::user('photo') ?>" alt="" width="20" class="img-rounded">
+                <?php echo AuthComponent::user('name') ?> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
                 <li>

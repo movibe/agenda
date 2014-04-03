@@ -13,7 +13,6 @@
       var baseUrl = "<?php echo Router::url('/',true);?>";
   </script>
 
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>

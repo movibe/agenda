@@ -6,6 +6,7 @@
       'User',
       array
       (
+        'type' => 'file',
         'class'     => '',
         'inputDefaults' => array
         (
@@ -19,12 +20,23 @@
     </div>
 
     <hr>
+      <!-- Upload -->
+      <div class="form-group">
+        <?php
+        //echo $this->Form->file('photo', array(
+         // 'label'=> 'Foto'));
+        ?>
+        <?php echo Configure::read('Gerenciador.photo_thumbnail_size.0') ?>
+        <input name="multipleFiles[]" id="filesToUpload" type="file" multiple="" />
+      </div>
+
       <div class="form-group">
         <?php
         echo $this->Form->input('name',
           array(
-            'placeholder' => __('Name'),
+            'placeholder' => __('Nome'),
             'class' => 'form-control',
+            'label' => 'Nome',
             'value' => !empty( $user['User']['name'] ) ? $user['User']['name'] : ''
           )
         );
@@ -36,6 +48,7 @@
           array(
             'placeholder' => __('Username'),
             'class' => 'form-control',
+            'label' => 'Login',
             'value' => !empty( $user['User']['username'] ) ? $user['User']['username'] : ''
           )
         );
@@ -49,6 +62,7 @@
             'type' => 'email',
             'class' => 'form-control',
             'placeholder' => __('Email'),
+            'label' => 'E-mail',
             'required' => 'required',
             'value' => !empty( $user['User']['email'] ) ? $user['User']['email'] : ''
           )
@@ -62,6 +76,7 @@
             'type' => 'password',
             'class' => 'form-control',
             'placeholder' => __('Password'),
+            'label' => 'Senha',
             'value' => false
           )
         );
@@ -72,6 +87,7 @@
         echo $this->Form->input('role', array(
             'options' => array('admin' => __('Admin'), 'author' => __('Author') , 'client' => __('Cliente')),
             'class' => 'form-control',
+            'label' => 'Grupo',
             'selected' => !empty( $user['User']['role'] ) ? $user['User']['role'] : ''
         ));
         ?>
